@@ -53,7 +53,7 @@ function PostCard({
           <Image
             src={
               post.user?.avatar ||
-              "https://xynshcnkxdliapebmyaz.supabase.co/storage/v1/object/public/images/posts/unnamed-14.jpg"
+              "https://wmzebamejypqhkhnqypv.supabase.co/storage/v1/object/public/images/posts/pic1.png"
             }
             alt={post.user?.username || "default_user"}
             fill
@@ -128,7 +128,7 @@ export default function Home() {
   useEffect(() => {
     const fetchPosts = async () => {
       const { data, error } = await supabase
-        .from("posts_new")
+        .from("post_new")
         .select("*")
         .order("created_at", { ascending: false });
 
